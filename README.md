@@ -28,7 +28,7 @@ Antes de rodar o projeto, certifique-se de ter o seguinte instalado no sistema:
 Faça o download do código-fonte para a sua máquina. Você pode clonar o repositório usando o Git:
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/RichardsonMM/Trabalho-SO2.git
 ```
 
 ### 2. **Instale as Dependências**
