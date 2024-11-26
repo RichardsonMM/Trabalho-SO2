@@ -1,70 +1,103 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Simulador de Formas de Alocação de Blocos Lógicos**
 
-## Available Scripts
+Este é um simulador de métodos de alocação de blocos lógicos, implementado como uma aplicação web interativa. Ele suporta os métodos de alocação:
 
-In the project directory, you can run:
+- **Contígua**
+- **Encadeada**
+- **Indexada**
 
-### `npm start`
+O simulador permite criar e manipular blocos lógicos no disco, adicionando arquivos, deletando-os e visualizando suas alocações de forma gráfica.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Pré-requisitos**
 
-### `npm test`
+Antes de rodar o projeto, certifique-se de ter o seguinte instalado no sistema:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Node.js** (versão LTS recomendada - 18 ou superior).
+   - Você pode baixar o Node.js em: [https://nodejs.org/](https://nodejs.org/)
+2. **Gerenciador de Pacotes npm** (vem junto com o Node.js).
+3. **Editor de Texto ou IDE** (recomendado: VS Code).
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **Passo a Passo para Rodar o Projeto**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. **Baixe o arquivo ZIP**
+Faça o download da pasta ZIP do projeto anexado no moodle.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. **Instale as Dependências**
+Instale todas as dependências do projeto listadas no `package.json`:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Este comando instalará bibliotecas essenciais como:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React**
+- **React Flow**
+- **React Toastify**
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. **Inicie o Servidor de Desenvolvimento**
+Para iniciar o simulador no navegador, execute o seguinte comando:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+Após isso, o projeto será compilado e aberto automaticamente no navegador padrão. Se isso não ocorrer, acesse:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+http://localhost:3000
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## **Como Usar o Simulador**
 
-### Making a Progressive Web App
+1. **Escolha o Método de Alocação:**
+   - Use o menu suspenso para selecionar entre os métodos **Contígua**, **Encadeada** ou **Indexada**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Defina o Tamanho do Disco:**
+   - Insira o número de blocos que o disco deve ter no campo "Tamanho do Disco".
+   - Clique em **Criar Disco** para inicializar os blocos lógicos.
 
-### Advanced Configuration
+3. **Adicione Arquivos:**
+   - Preencha os campos:
+     - **Nome do Arquivo**
+     - **Tamanho do Arquivo (em blocos lógicos)**
+   - Clique em **Adicionar Arquivo**. O arquivo será alocado de acordo com o método selecionado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. **Deletar Arquivos:**
+   - Insira o nome do arquivo no campo de deleção e clique em **Deletar Arquivo**.
 
-### Deployment
+5. **Visualizar Alocação:**
+   - Clique em um arquivo na tabela para destacar sua alocação no disco.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## **Estrutura do Projeto**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **`src/`**:
+  - **`App.js`**: Arquivo principal da aplicação.
+  - **`allocationContiguous.js`**: Lógica para alocação contígua.
+  - **`allocationChained.js`**: Lógica para alocação encadeada.
+  - **`allocationIndexed.js`**: Lógica para alocação indexada.
+  - **`App.css`**: Estilos CSS da aplicação.
+
+---
+
+## **Tecnologias Utilizadas**
+
+- **React.js**: Framework principal para criação da interface.
+- **React Flow**: Para visualização gráfica dos blocos e arestas.
+- **React Toastify**: Para exibição de notificações (sucesso/erro).
+- **HTML5 + CSS3**: Estrutura e estilização.
+
+---
