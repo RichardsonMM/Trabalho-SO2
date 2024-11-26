@@ -24,12 +24,14 @@ Antes de rodar o projeto, certifique-se de ter o seguinte instalado no sistema:
 
 ## **Passo a Passo para Rodar o Projeto**
 
-### 1. **Baixe o arquivo ZIP**
-Faça o download da pasta ZIP do projeto anexado no moodle.
+### 1. **Clone o Repositório**
+Faça o download do código-fonte para a sua máquina. Você pode clonar o repositório usando o Git:
 
+```bash
+git clone <URL_DO_REPOSITORIO>
+```
 
-
-### 3. **Instale as Dependências**
+### 2. **Instale as Dependências**
 Instale todas as dependências do projeto listadas no `package.json`:
 
 ```bash
